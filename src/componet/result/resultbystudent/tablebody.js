@@ -53,6 +53,7 @@ function Tablebody({ offset, formatDate, resultBy }) {
 
   const fetchDataAndExport = async (id) => {
     setResultId(id);
+    formate();
   };
 
   useEffect(() => {

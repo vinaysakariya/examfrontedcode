@@ -102,51 +102,44 @@ function QuestionbyQuize() {
   };
 
   return (
-    <div className="flex">
+    <div className="flex min-h-screen">
       <Sidebar />
-      <div className="w-full ">
-        <div>
-          <Navbar />
-        </div>
-
-        <div className="w-50 mx-auto mt-5 mb-4">
-          <h1 className="mb-4">Add New Quiz</h1>
-
-          <div className="mb-3">
-            <label htmlFor="question" className="form-label">
-              Quiz-Name
-            </label>
-
-            <table>
+      <div className="flex flex-col w-full">
+        <Navbar />
+        <div className=" mx-auto px-4 py-5 flex-grow">
+          <h1 className="mb-4 text-center text-2xl md:text-3xl font-semibold">
+            Add New Question
+          </h1>
+          <div className="overflow-y-scroll max-h-[60vh] bg-white p-4 rounded shadow-md">
+            <table className="w-full border-collapse">
               <tbody>
                 {isLoading ? (
-                  <div className="flex align-middle">Loading ...</div>
+                  <tr>
+                    <td className="text-center py-4">Loading...</td>
+                  </tr>
                 ) : (
                   data.map((info, ind) => (
-                    <tr key={ind} className="border-2 border-slate-500">
-                      <td className="px-96 py-3">
-                        <div className="flex items-center">
-                          <div>
-                            <input
-                              type="checkbox"
-                              className="h-4 w-4 "
-                              value={info._id}
-                              checked={
-                                checkedIds.includes(info._id)
-                                  ? checkedIds.includes(info._id)
-                                  : hadcheck.data?.map((ele) => {
-                                      return ele;
-                                    })
-                              }
-                              onChange={handleQuestion}
-                            />
-                          </div>
-                          <div className="fw-bold text-xl">
-                            {" "}
+                    <tr key={ind} className="border-b border-slate-200">
+                      <td className="py-3 text-left px-2">
+                        <div className="flex items-center space-x-2">
+                          <input
+                            type="checkbox"
+                            className="h-4 w-4"
+                            value={info._id}
+                            checked={
+                              checkedIds.includes(info._id)
+                                ? checkedIds.includes(info._id)
+                                : hadcheck.data
+                                    ?.map((ele) => ele._id)
+                                    .includes(info._id)
+                            }
+                            onChange={handleQuestion}
+                          />
+                          <span className="font-bold text-lg text-left whitespace-nowrap overflow-hidden overflow-ellipsis">
                             {info.question?.length <= 40
                               ? info.question
-                              : `${info.question?.substring(0, 40)}.....`}
-                          </div>
+                              : `${info.question?.substring(0, 100)}.....`}
+                          </span>
                         </div>
                       </td>
                     </tr>
@@ -155,13 +148,14 @@ function QuestionbyQuize() {
               </tbody>
             </table>
           </div>
-          <button className="btn btn-primary" onClick={handleSubmit}>
-            Submit
-          </button>
-          <Link to="/admin/Sectionmain">
-            <button className="btn btn-primary ml-3">Back</button>
-          </Link>
-          {/* </form> */}
+          <div className="flex justify-center mt-4">
+            <button className="btn btn-primary" onClick={handleSubmit}>
+              Submit
+            </button>
+            <Link to="/admin/Sectionmain" className="ml-3">
+              <button className="btn btn-secondary">Back</button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
