@@ -1,0 +1,24 @@
+.CustomDatePicker {
+  position: absolute;
+  right: 0px;
+  top: 20px;
+  z-index: 999;
+  span {
+    width: auto !important;
+  }
+
+  @media screen and (max-width: 1200px) {
+    transform: scale(50%) !important;
+    top: -60px !important;
+    right: -120px;
+  }
+}
+
+.CalenderIcon {
+  position: absolute;
+  right: 10px;
+  top: -45px;
+  color: var(--light);
+  transform: scale(130%);
+  cursor: pointer;
+}
