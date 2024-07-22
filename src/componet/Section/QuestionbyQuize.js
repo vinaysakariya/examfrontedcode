@@ -12,8 +12,10 @@ function QuestionbyQuize() {
   const [isLoading, setIsLoading] = useState(false);
   const [checkedIds, setCheckedIds] = useState([]);
   const token = localStorage.getItem("authToken");
-  const url = "https://exambackendcode.vercel.app/questions/getallquestions";
-  const api = `https://exambackendcode.vercel.app
+  const url = "https://examsystem123.vercel.app
+/questions/getallquestions";
+  const api = `https://examsystem123.vercel.app
+
 
 /section/read/${id}`;
   useEffect(() => {
@@ -78,7 +80,8 @@ function QuestionbyQuize() {
     e.preventDefault();
     const awr = arrrr.map((ele) => {
       const response = fetch(
-        `https://exambackendcode.vercel.app
+        `https://examsystem123.vercel.app
+
 
 /section/insert-questions/${id}`,
         {

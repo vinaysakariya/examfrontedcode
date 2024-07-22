@@ -29,8 +29,10 @@ function Sectionform({ setIsLoggedIn }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const createApi = "https://exambackendcode.vercel.app/section/create";
-    const updateApi = `https://exambackendcode.vercel.app/section/update/${inputSectiondata._id}`;
+    const createApi = "https://examsystem123.vercel.app
+/section/create";
+    const updateApi = `https://examsystem123.vercel.app
+/section/update/${inputSectiondata._id}`;
 
     try {
       const api = inputSectiondata._id ? updateApi : createApi;

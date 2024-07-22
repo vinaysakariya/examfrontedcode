@@ -18,7 +18,8 @@ import {
 } from "../../../reduxfiles/quizredux";
 
 function Tablebody({ formatDate, offset, showQuestion }) {
-  const url = "https://exambackendcode.vercel.app/quiz/read";
+  const url = "https://examsystem123.vercel.app
+/quiz/read";
   const navigate = useNavigate();
   const inputs = useSelector((state) => state.inputs3);
   const dispatch = useDispatch();
@@ -51,7 +52,8 @@ function Tablebody({ formatDate, offset, showQuestion }) {
   const fetchDataAndExport = async (id) => {
     try {
       const response = await fetch(
-        `https://exambackendcode.vercel.app
+        `https://examsystem123.vercel.app
+
 
 /quiz/getall/${id}`,
         {
@@ -138,7 +140,8 @@ function Tablebody({ formatDate, offset, showQuestion }) {
     async (id) => {
       try {
         const response = await fetch(
-          `https://exambackendcode.vercel.app
+          `https://examsystem123.vercel.app
+
 
 /quiz/delete/${id}`,
           {

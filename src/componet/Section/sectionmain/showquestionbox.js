@@ -11,7 +11,7 @@ function Showquestionbox({ showQuestion }) {
   const navigate = useNavigate();
   const token = localStorage.getItem("authToken");
   const url = useMemo(
-    () => "https://exambackendcode.vercel.app/section/getall",
+    () => "https://examsystem123.vercel.app/section/getall",
     []
   );
 
@@ -50,7 +50,7 @@ function Showquestionbox({ showQuestion }) {
 
   //     try {
   //       const response = await fetch(
-  //         `https://exambackendcode.vercel.app/quize/deletequize-question/${id2}`,
+  //         `https://examsystem123.vercel.app/quize/deletequize-question/${id2}`,
   //         {
   //           method: "PUT",
   //           headers: {
@@ -78,7 +78,7 @@ function Showquestionbox({ showQuestion }) {
 
       try {
         const response = await fetch(
-          `https://exambackendcode.vercel.app/section/deletequize-question/${id2}`,
+          `https://examsystem123.vercel.app/section/deletequize-question/${id2}`,
           {
             method: "PUT",
             headers: {

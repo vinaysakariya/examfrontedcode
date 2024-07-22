@@ -7,9 +7,11 @@ function Main({ setIsLoggedIn }) {
   const [topStudunt, setTopStudent] = useState([]);
   const token = localStorage.getItem("authToken");
   const RecentStudentApi =
-    "https://exambackendcode.vercel.app/result/recentResults";
+    "https://examsystem123.vercel.app
+/result/recentResults";
   const TopStudentApi =
-    "https://exambackendcode.vercel.app/result/topTenResults";
+    "https://examsystem123.vercel.app
+/result/topTenResults";
 
   const fetchData = useCallback(async () => {
     try {
