@@ -28,7 +28,7 @@ function Createmain({ setIsLoggedIn }) {
   const token = localStorage.getItem("authToken");
   const dispatch = useDispatch();
   const inputs = useSelector((state) => state.inputs);
-  const sortByOptions = useMemo(() => [10, 20, 30, 40, 50, 60], []);
+  const sortByOptions = useMemo(() => [10, 20, 30, 40, 50, 60, 70], []);
 
   const urloFe = useMemo(
     () => `https://exam-project-backend.vercel.app/search/getsearchAll`,
