@@ -16,7 +16,8 @@
 //   const fetchData = useCallback(async () => {
 //     try {
 //       const response = await fetch(
-//         `https://exam-project-backend.vercel.app/quiz/read/${id}`
+//         `examfrontedcode.vercel.app
+/quiz/read/${id}`
 //       );
 //       if (!response.ok) {
 //         throw new Error("Network response was not ok");
@@ -34,7 +35,7 @@
 
 //       try {
 //         const response = await fetch(
-//           `https://exam-project-backend.vercel.app/quiz/deletetquiz/${id}`,
+//           `examfrontedcode.vercel.app/quiz/deletetquiz/${id}`,
 //           {
 //             method: "PUT",
 //             headers: {

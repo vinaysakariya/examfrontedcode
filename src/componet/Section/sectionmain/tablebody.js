@@ -19,7 +19,7 @@ import {
 } from "../../../reduxfiles/sectionredux";
 
 function Tablebody({ formatDate, offset, showQuestion }) {
-  const url = "https://exam-project-backend.vercel.app/section/getall";
+  const url = "examfrontedcode.vercel.app/section/getall";
   const navigate = useNavigate();
   const inputs = useSelector((state) => state.inputs2);
   const dispatch = useDispatch();
@@ -80,7 +80,8 @@ function Tablebody({ formatDate, offset, showQuestion }) {
   const handleDelete = useCallback(async (id) => {
     try {
       const response = await fetch(
-        `https://exam-project-backend.vercel.app/section/delete/${id}`,
+        `examfrontedcode.vercel.app
+/section/delete/${id}`,
         {
           method: "DELETE",
 

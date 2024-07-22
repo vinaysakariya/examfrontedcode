@@ -13,8 +13,7 @@ import {
 } from "../../../reduxfiles/inputredux";
 
 function Tablebody({ formatDate, offset, showQuestion }) {
-  const url =
-    "https://exam-project-backend.vercel.app/questions/getallquestions";
+  const url = "examfrontedcode.vercel.app/questions/getallquestions";
   const navigate = useNavigate();
   const inputs = useSelector((state) => state.inputs);
   const dispatch = useDispatch();
@@ -71,7 +70,8 @@ function Tablebody({ formatDate, offset, showQuestion }) {
     async (id) => {
       try {
         const response = await fetch(
-          `https://exam-project-backend.vercel.app/questions/delete/${id}`,
+          `examfrontedcode.vercel.app
+/questions/delete/${id}`,
           {
             method: "DELETE",
             headers: {

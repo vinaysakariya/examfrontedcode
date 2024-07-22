@@ -29,7 +29,8 @@ function Resultstudentmain({ setIsLoggedIn }) {
   const inputs = useSelector((state) => state.inputs5);
 
   const sortByOptions = useMemo(() => [10, 20, 30, 40, 50, 60], []);
-  const urloFe = `https://exam-project-backend.vercel.app/search/getsearchsection/${resultsectionId}`;
+  const urloFe = `examfrontedcode.vercel.app
+/search/getsearchsection/${resultsectionId}`;
   const [limit, setLimit] = useState(10);
   const [resultBy, setResult] = useState("Quiz");
   const sortBy = "createdAt";

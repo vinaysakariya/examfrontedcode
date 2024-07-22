@@ -10,10 +10,7 @@ function Showquestionbox({ showQuestion }) {
   const id2 = localStorage.getItem("ShowsectionId");
   const navigate = useNavigate();
   const token = localStorage.getItem("authToken");
-  const url = useMemo(
-    () => "https://exam-project-backend.vercel.app/section/getall",
-    []
-  );
+  const url = useMemo(() => "examfrontedcode.vercel.app/section/getall", []);
 
   useEffect(() => {
     if (inputs?.openpop === true) {
@@ -50,7 +47,7 @@ function Showquestionbox({ showQuestion }) {
 
   //     try {
   //       const response = await fetch(
-  //         `https://exam-project-backend.vercel.app/quize/deletequize-question/${id2}`,
+  //         `examfrontedcode.vercel.app/quize/deletequize-question/${id2}`,
   //         {
   //           method: "PUT",
   //           headers: {
@@ -78,7 +75,8 @@ function Showquestionbox({ showQuestion }) {
 
       try {
         const response = await fetch(
-          `https://exam-project-backend.vercel.app/section/deletequize-question/${id2}`,
+          `examfrontedcode.vercel.app
+/section/deletequize-question/${id2}`,
           {
             method: "PUT",
             headers: {

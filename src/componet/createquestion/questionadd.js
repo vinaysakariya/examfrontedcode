@@ -39,9 +39,8 @@ function QuestionAdd({ setIsLoggedIn }) {
   const handleSubmit = useCallback(
     async (e) => {
       e.preventDefault();
-      const createApi =
-        "https://exam-project-backend.vercel.app/questions/create";
-      const updateApi = `https://exam-project-backend.vercel.app/questions/update/${inputquedata._id}`;
+      const createApi = "examfrontedcode.vercel.app/questions/create";
+      const updateApi = `examfrontedcode.vercel.app/questions/update/${inputquedata._id}`;
       try {
         const api = inputquedata._id ? updateApi : createApi;
         const response = await fetch(api, {

@@ -22,7 +22,8 @@ function Tablebody({ offset, formatDate, resultBy }) {
     if (resultId) {
       try {
         const response = await fetch(
-          `https://exam-project-backend.vercel.app/result/read/${resultId}`,
+          `examfrontedcode.vercel.app
+/result/read/${resultId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

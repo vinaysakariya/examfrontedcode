@@ -26,7 +26,8 @@ function Sectionmain({ setIsLoggedIn }) {
 
   // Memoized sortByOptions array
   const sortByOptions = useMemo(() => [10, 20, 30, 40, 50, 60], []);
-  const urloFe = `https://exam-project-backend.vercel.app/search/getsearchAll`; //api
+  const urloFe = `examfrontedcode.vercel.app
+/search/getsearchAll`; //api
   const [limit, setLimit] = useState(10);
   const sortBy = "createdAt";
   let type = "section";

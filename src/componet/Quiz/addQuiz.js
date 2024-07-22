@@ -26,8 +26,9 @@ function AddQuiz({ setIsLoggedIn }) {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const createApi = "https://exam-project-backend.vercel.app/quiz/create";
-    const updateApi = `https://exam-project-backend.vercel.app/quiz/update/${inputQuizdata._id}`;
+    const createApi = "examfrontedcode.vercel.app/quiz/create";
+    const updateApi = `examfrontedcode.vercel.app
+/quiz/update/${inputQuizdata._id}`;
     try {
       const api = inputQuizdata._id ? updateApi : createApi;
       const response = await fetch(api, {

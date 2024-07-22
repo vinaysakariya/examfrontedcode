@@ -38,7 +38,7 @@ function Uplodfile() {
 
         try {
           const response = await axios.post(
-            "https://exam-project-backend.vercel.app/file/questionupload",
+            "examfrontedcode.vercel.app/file/questionupload",
             formData,
             {
               headers: {
@@ -66,7 +66,7 @@ function Uplodfile() {
 
     try {
       const response = await axios.get(
-        `https://exam-project-backend.vercel.app/file/questioread/${file}`,
+        `examfrontedcode.vercel.app/file/questioread/${file}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -182,7 +182,7 @@ export default Uplodfile;
 
 //     if (validatedData.length > 0) {
 //       setExcelData(validatedData);
-//       const createApi = "https://exam-project-backend.vercel.app/questions/create";
+//       const createApi = "examfrontedcode.vercel.app/questions/create";
 
 //       try {
 //         const responses = await Promise.all(

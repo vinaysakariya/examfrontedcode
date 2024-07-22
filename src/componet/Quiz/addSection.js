@@ -11,7 +11,7 @@ function AddSection() {
   const navigator = useNavigate();
   const [checkedIds, setCheckedIds] = useState([]);
   const token = localStorage.getItem("authToken");
-  const url = "https://exam-project-backend.vercel.app/section/getall";
+  const url = "examfrontedcode.vercel.app/section/getall";
 
   useEffect(() => {
     fetchData();
@@ -40,7 +40,8 @@ function AddSection() {
   const fetchQuizData = async () => {
     try {
       const response = await fetch(
-        `https://exam-project-backend.vercel.app/quiz/read/${id}`,
+        `examfrontedcode.vercel.app
+/quiz/read/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -84,7 +85,8 @@ function AddSection() {
 
     const awr = arrrr.map((ele) => {
       const response = fetch(
-        `https://exam-project-backend.vercel.app/quiz/insertquiz/${id}`,
+        `examfrontedcode.vercel.app
+/quiz/insertquiz/${id}`,
         {
           method: "PUT",
           headers: {

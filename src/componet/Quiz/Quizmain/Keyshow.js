@@ -16,7 +16,8 @@ function Keyshow() {
   const [keydata, setKeydata] = useState([]);
   const [error, setError] = useState("");
   const token = localStorage.getItem("authToken");
-  const Featchapi = `https://exam-project-backend.vercel.app/key/update/${inputs.Tablemanuplation.idkeystores}`;
+  const Featchapi = `examfrontedcode.vercel.app
+/key/update/${inputs.Tablemanuplation.idkeystores}`;
 
   const handleDateRangePicker = (ranges) => {
     const serializedSelection = serializedSelectionDatePicker(ranges);
@@ -37,7 +38,7 @@ function Keyshow() {
   const keyGenerate = useCallback(async () => {
     try {
       const response = await fetch(
-        "https://exam-project-backend.vercel.app/key/generatekey",
+        "examfrontedcode.vercel.app/key/generatekey",
         {
           method: "POST",
           headers: {
@@ -97,7 +98,8 @@ function Keyshow() {
   const handleDelete = useCallback(async (id) => {
     try {
       const response = await fetch(
-        `https://exam-project-backend.vercel.app/key/delete/${id}`,
+        `examfrontedcode.vercel.app
+/key/delete/${id}`,
         {
           method: "PUT",
 
