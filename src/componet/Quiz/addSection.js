@@ -11,7 +11,7 @@ function AddSection() {
   const navigator = useNavigate();
   const [checkedIds, setCheckedIds] = useState([]);
   const token = localStorage.getItem("authToken");
-  const url = "examfrontedcode.vercel.app/section/getall";
+  const url = "https://exambackendcode.vercel.app/section/getall";
 
   useEffect(() => {
     fetchData();
@@ -40,7 +40,8 @@ function AddSection() {
   const fetchQuizData = async () => {
     try {
       const response = await fetch(
-        `examfrontedcode.vercel.app
+        `https://exambackendcode.vercel.app
+
 /quiz/read/${id}`,
         {
           headers: {
@@ -85,7 +86,8 @@ function AddSection() {
 
     const awr = arrrr.map((ele) => {
       const response = fetch(
-        `examfrontedcode.vercel.app
+        `https://exambackendcode.vercel.app
+
 /quiz/insertquiz/${id}`,
         {
           method: "PUT",

@@ -27,7 +27,7 @@ function Quizmain({ setIsLoggedIn }) {
 
   const inputs = useSelector((state) => state.inputs3);
   const sortByOptions = useMemo(() => [10, 20, 30, 40, 50, 60], []);
-  const urloFe = "examfrontedcode.vercel.app/search/getsearchAll";
+  const urloFe = "https://exambackendcode.vercel.app/search/getsearchAll";
   const [limit, setLimit] = useState(10);
   const [search, setSearch] = useState("");
   const [sortOrder, setSortOrder] = useState("asc");

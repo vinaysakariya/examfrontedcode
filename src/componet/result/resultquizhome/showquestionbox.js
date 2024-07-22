@@ -6,7 +6,8 @@
 
 // function Showquestionbox({ showQuestion }) {
 //   const id2 = localStorage.getItem("sectionId");
-//   const url = `examfrontedcode.vercel.app
+//   const url = `https://exambackendcode.vercel.app
+
 /section/read`;
 //   const dispatch = useDispatch();
 //   const inputs = useSelector((state) => state.inputs3);
@@ -39,7 +40,8 @@
 
 //       try {
 //         const response = await fetch(
-//           `examfrontedcode.vercel.app
+//           `https://exambackendcode.vercel.app
+
 /section/deletetquiz/${id2}`,
 //           {
 //             method: "PUT",

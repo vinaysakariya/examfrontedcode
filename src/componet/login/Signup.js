@@ -27,7 +27,7 @@
 //     async (e) => {
 //       e.preventDefault();
 
-//       const api = "examfrontedcode.vercel.app/auth/signup";
+//       const api = "https://exambackendcode.vercel.ap/auth/signup";
 //       try {
 //         const response = await fetch(api, {
 //           method: "POST",
@@ -170,7 +170,7 @@ const Signup = ({ setIsLoggedIn }) => {
     async (e) => {
       e.preventDefault();
 
-      const api = "examfrontedcode.vercel.app/auth/signup";
+      const api = "https://exambackendcode.vercel.app/auth/signup";
       try {
         const response = await fetch(api, {
           method: "POST",

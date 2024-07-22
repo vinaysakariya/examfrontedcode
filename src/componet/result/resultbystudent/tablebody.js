@@ -22,7 +22,8 @@ function Tablebody({ offset, formatDate, resultBy }) {
     if (resultId) {
       try {
         const response = await fetch(
-          `examfrontedcode.vercel.app
+          `https://exambackendcode.vercel.app
+
 /result/read/${resultId}`,
           {
             headers: {

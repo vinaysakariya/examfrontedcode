@@ -12,8 +12,9 @@ function QuestionbyQuize() {
   const [isLoading, setIsLoading] = useState(false);
   const [checkedIds, setCheckedIds] = useState([]);
   const token = localStorage.getItem("authToken");
-  const url = "examfrontedcode.vercel.app/questions/getallquestions";
-  const api = `examfrontedcode.vercel.app
+  const url = "https://exambackendcode.vercel.app/questions/getallquestions";
+  const api = `https://exambackendcode.vercel.app
+
 /section/read/${id}`;
   useEffect(() => {
     fetchData();
@@ -77,7 +78,8 @@ function QuestionbyQuize() {
     e.preventDefault();
     const awr = arrrr.map((ele) => {
       const response = fetch(
-        `examfrontedcode.vercel.app
+        `https://exambackendcode.vercel.app
+
 /section/insert-questions/${id}`,
         {
           method: "PUT",
