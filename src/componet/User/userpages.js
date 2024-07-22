@@ -1,45 +1,3 @@
-// import React, { useEffect, useRef, useState } from "react";
-
-// import { jwtDecode } from "jwt-decode"; // Use the named export
-// import Quizestart from "./Quizestart";
-
-// function Userpage() {
-//   const [isstart, setIsstart] = useState(false);
-//   const [details, setDetails] = useState({});
-//   const id = localStorage.getItem("paperQuizId");
-
-//   const [showPopup, setShowPopup] = useState(false);
-//   useEffect(() => {
-//     const token = localStorage?.getItem("authTokenstu");
-//     if (token) {
-//       setDetails(jwtDecode(token)); // Use the named export
-//     }
-//   }, []);
-//   console.log("details", details.key?._id);
-//   const handleQuize = () => {
-//     setIsstart(true);
-//   };
-//   // popupbox*****************************////////////
-//   useEffect(() => {
-//     const handleKeyPress = () => {
-//       setShowPopup(true);
-//     };
-//     const handleContextMenu = (e) => {
-//       e.preventDefault();
-//     };
-
-//     window.addEventListener("keydown", handleKeyPress);
-//     document.addEventListener("contextmenu", handleContextMenu);
-//     // Cleanup event listener on component unmount
-//     return () => {
-//       window.removeEventListener("keydown", handleKeyPress);
-//       document.removeEventListener("contextmenu", handleContextMenu);
-//     };
-//   }, []);
-
-//   const handleClosePopup = () => {
-//     setShowPopup(false);
-//   };
 import React, { useEffect, useRef, useState } from "react";
 import { jwtDecode } from "jwt-decode"; // Use the named export
 import Quizestart from "./Quizestart";
@@ -58,25 +16,35 @@ function Userpage() {
     }
   }, []);
 
-  useEffect(() => {
-    const requestFullscreen = () => {
-      const element = document.documentElement;
-      if (element.requestFullscreen) {
-        element.requestFullscreen();
-      } else if (element.mozRequestFullScreen) {
-        element.mozRequestFullScreen();
-      } else if (element.webkitRequestFullscreen) {
-        element.webkitRequestFullscreen();
-      } else if (element.msRequestFullscreen) {
-        element.msRequestFullscreen();
-      }
-    };
+  // useEffect(() => {
+  // //   const requestFullscreen = () => {
+  // //     const element = document.documentElement;
+  // //     if (element.requestFullscreen) {
+  // //       element.requestFullscreen();
+  // //     } else if (element.mozRequestFullScreen) {
+  // //       element.mozRequestFullScreen();
+  // //     } else if (element.webkitRequestFullscreen) {
+  // //       element.webkitRequestFullscreen();
+  // //     } else if (element.msRequestFullscreen) {
+  // //       element.msRequestFullscreen();
+  // //     }
+  // //   };
 
-    requestFullscreen();
-  }, []);
+  // //   requestFullscreen();
+  // // }, []);
 
   const handleQuize = () => {
     setIsstart(true);
+    const element = document.documentElement;
+    if (element.requestFullscreen) {
+      element.requestFullscreen();
+    } else if (element.mozRequestFullScreen) {
+      element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullscreen) {
+      element.webkitRequestFullscreen();
+    } else if (element.msRequestFullscreen) {
+      element.msRequestFullscreen();
+    }
   };
 
   // popupbox*****************************////////////

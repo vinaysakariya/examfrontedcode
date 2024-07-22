@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 
-import html2canvas from "html2canvas";
-import axios from "axios";
 function Quizestart({ id, keyid }) {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -23,40 +21,10 @@ function Quizestart({ id, keyid }) {
   const partsPerPage = 1; // Number of parts per page
   const questionsPerPage = 1; // Number of questions per page
 
-  const url = `https://exambackendcode.vercel.app
+  const url = `https://exambackendcode.vercel.app/quiz/getall/${id}`;
 
-/quiz/getall/${id}`;
-  //*************************************************** */
-
-  //************************************************* */
   const [timeRemaining, setTimeRemaining] = useState(); // Initial time in minutes
 
-  //************** Take Screen shoot ***********************************/
-  // useEffect(() => {
-  //   const takeScreenshotAndSend = async () => {
-  //     try {
-  //       const canvas = await html2canvas(document.body);
-  //       const imgData = canvas.toDataURL("image/png");
-
-  //       await axios.post("https://exambackendcode.vercel.app/file/ssupload", {
-  //         screenshot: imgData,
-  //       });
-
-  //       console.log("Screenshot taken and sent successfully.");
-  //     } catch (error) {
-  //       console.error("Error taking screenshot and sending:", error);
-  //     }
-  //   };
-
-  //   takeScreenshotAndSend();
-
-  //   const interval = setInterval(() => {
-  //     takeScreenshotAndSend();
-  //   }, 60000);
-
-  //   // Clean up interval on component unmount
-  //   return () => clearInterval(interval);
-  // }, []);
   useEffect(() => {
     const totalSeconds = timeRemaining * 60;
     let currentTime = totalSeconds;
@@ -199,9 +167,6 @@ function Quizestart({ id, keyid }) {
   };
 
   const handleSubmit = async (e) => {
-    //*************************** */
-
-    //******************************** */
     const result = arrrr[0] || {
       quizId: `${id}`,
       questions: [],
