@@ -181,8 +181,7 @@ function Quizestart({ id, keyid }) {
 
     try {
       const response = await fetch(
-        "https://examsystem123.vercel.app
-/result/create",
+        "https://examsystem123.vercel.app/result/create",
         {
           method: "POST",
           headers: {

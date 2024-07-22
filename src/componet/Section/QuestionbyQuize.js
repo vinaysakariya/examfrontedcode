@@ -12,8 +12,7 @@ function QuestionbyQuize() {
   const [isLoading, setIsLoading] = useState(false);
   const [checkedIds, setCheckedIds] = useState([]);
   const token = localStorage.getItem("authToken");
-  const url = "https://examsystem123.vercel.app
-/questions/getallquestions";
+  const url = "https://examsystem123.vercel.app/questions/getallquestions";
   const api = `https://examsystem123.vercel.app
 
 

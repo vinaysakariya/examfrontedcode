@@ -19,8 +19,7 @@ import {
 } from "../../../reduxfiles/sectionredux";
 
 function Tablebody({ formatDate, offset, showQuestion }) {
-  const url = "https://examsystem123.vercel.app
-/section/getall";
+  const url = "https://examsystem123.vercel.app/section/getall";
   const navigate = useNavigate();
   const inputs = useSelector((state) => state.inputs2);
   const dispatch = useDispatch();

@@ -11,8 +11,7 @@ function AddSection() {
   const navigator = useNavigate();
   const [checkedIds, setCheckedIds] = useState([]);
   const token = localStorage.getItem("authToken");
-  const url = "https://examsystem123.vercel.app
-/section/getall";
+  const url = "https://examsystem123.vercel.app/section/getall";
 
   useEffect(() => {
     fetchData();

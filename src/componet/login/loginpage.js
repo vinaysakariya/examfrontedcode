@@ -24,8 +24,7 @@ const Loginpage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const api = "https://examsystem123.vercel.app
-/auth/userLogin";
+    const api = "https://examsystem123.vercel.app/auth/userLogin";
     try {
       const response = await fetch(api, {
         method: "POST",

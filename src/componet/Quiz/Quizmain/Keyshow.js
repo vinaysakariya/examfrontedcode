@@ -40,8 +40,7 @@ function Keyshow() {
   const keyGenerate = useCallback(async () => {
     try {
       const response = await fetch(
-        "https://examsystem123.vercel.app
-/key/generatekey",
+        "https://examsystem123.vercel.app/key/generatekey",
         {
           method: "POST",
           headers: {
