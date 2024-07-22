@@ -170,7 +170,7 @@ const Signup = ({ setIsLoggedIn }) => {
     async (e) => {
       e.preventDefault();
 
-      const api = "https://examsystem123.vercel.app/auth/signup";
+      const api = "https://exambackendcode.vercel.app/auth/signup";
       try {
         const response = await fetch(api, {
           method: "POST",

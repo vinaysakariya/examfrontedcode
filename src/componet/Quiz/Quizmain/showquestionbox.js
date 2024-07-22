@@ -8,7 +8,8 @@ import { setIsloading, setData } from "../../../reduxfiles/quizredux";
 function Showquestionbox({ showQuestion }) {
   const id2 = localStorage.getItem("QuizeId");
   console.log("s", id2);
-  const url = `https://examsystem123.vercel.app
+  const url = `https://exambackendcode.vercel.app
+
 
 /quiz/read`;
   const dispatch = useDispatch();
@@ -45,7 +46,8 @@ function Showquestionbox({ showQuestion }) {
     async (updatedDel) => {
       try {
         const response = await fetch(
-          `https://examsystem123.vercel.app
+          `https://exambackendcode.vercel.app
+
 
 
 /quiz/deletetquiz/${id2}`,

@@ -16,7 +16,8 @@ function Keyshow() {
   const [keydata, setKeydata] = useState([]);
   const [error, setError] = useState("");
   const token = localStorage.getItem("authToken");
-  const Featchapi = `https://examsystem123.vercel.app
+  const Featchapi = `https://exambackendcode.vercel.app
+
 
 
 /key/update/${inputs.Tablemanuplation.idkeystores}`;
@@ -40,7 +41,7 @@ function Keyshow() {
   const keyGenerate = useCallback(async () => {
     try {
       const response = await fetch(
-        "https://examsystem123.vercel.app/key/generatekey",
+        "https://exambackendcode.vercel.app/key/generatekey",
         {
           method: "POST",
           headers: {
@@ -100,7 +101,8 @@ function Keyshow() {
   const handleDelete = useCallback(async (id) => {
     try {
       const response = await fetch(
-        `https://examsystem123.vercel.app
+        `https://exambackendcode.vercel.app
+
 
 
 /key/delete/${id}`,

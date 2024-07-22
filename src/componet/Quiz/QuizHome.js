@@ -16,7 +16,8 @@
 //   const fetchData = useCallback(async () => {
 //     try {
 //       const response = await fetch(
-//         `https://examsystem123.vercel.app
+//         `https://exambackendcode.vercel.app
+
 /quiz/read/${id}`
 //       );
 //       if (!response.ok) {
@@ -35,7 +36,8 @@
 
 //       try {
 //         const response = await fetch(
-//           `https://examsystem123.vercel.app
+//           `https://exambackendcode.vercel.app
+
 /quiz/deletetquiz/${id}`,
 //           {
 //             method: "PUT",

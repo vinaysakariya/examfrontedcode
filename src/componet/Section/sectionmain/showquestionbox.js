@@ -11,7 +11,7 @@ function Showquestionbox({ showQuestion }) {
   const navigate = useNavigate();
   const token = localStorage.getItem("authToken");
   const url = useMemo(
-    () => "https://examsystem123.vercel.app/section/getall",
+    () => "https://exambackendcode.vercel.app/section/getall",
     []
   );
 
@@ -44,41 +44,14 @@ function Showquestionbox({ showQuestion }) {
     }
   }, [dispatch, url]);
 
-  // const handleDelete = useCallback(
-  //   async (id1) => {
-  //     const updatedDel = { questionId: id1 };
-
-  //     try {
-  //       const response = await fetch(
-  //         `https://examsystem123.vercel.app/quize/deletequize-question/${id2}`,
-  //         {
-  //           method: "PUT",
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //           },
-  //           body: JSON.stringify(updatedDel),
-  //         }
-  //       );
-
-  //       if (!response.ok) {
-  //         throw new Error("Network response was not ok");
-  //       }
-
-  //       await response.json();
-  //       fetchData();
-  //     } catch (error) {
-  //       console.error("Fetch operation error:", error);
-  //     }
-  //   },
-  //   [id2, fetchData]
-  // );
   const handleDelete = useCallback(
     async (id1) => {
       const updatedDel = { questionId: id1 };
 
       try {
         const response = await fetch(
-          `https://examsystem123.vercel.app/section/deletequize-question/${id2}`,
+          `https://exambackendcode.vercel.app
+/section/deletequize-question/${id2}`,
           {
             method: "PUT",
             headers: {

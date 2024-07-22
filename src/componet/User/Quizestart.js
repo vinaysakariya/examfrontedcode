@@ -21,7 +21,8 @@ function Quizestart({ id, keyid }) {
   const partsPerPage = 1; // Number of parts per page
   const questionsPerPage = 1; // Number of questions per page
 
-  const url = `https://examsystem123.vercel.app
+  const url = `https://exambackendcode.vercel.app
+
 /quiz/getall/${id}`;
 
   const [timeRemaining, setTimeRemaining] = useState(); // Initial time in minutes
@@ -181,7 +182,7 @@ function Quizestart({ id, keyid }) {
 
     try {
       const response = await fetch(
-        "https://examsystem123.vercel.app/result/create",
+        "https://exambackendcode.vercel.app/result/create",
         {
           method: "POST",
           headers: {

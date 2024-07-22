@@ -6,7 +6,8 @@
 
 // function Showquestionbox({ showQuestion }) {
 //   const id2 = localStorage.getItem("sectionId");
-//   const url = `https://examsystem123.vercel.app
+//   const url = `https://exambackendcode.vercel.app
+
 
 
 /section/read`;
@@ -41,7 +42,8 @@
 
 //       try {
 //         const response = await fetch(
-//           `https://examsystem123.vercel.app
+//           `https://exambackendcode.vercel.app
+
 
 
 /section/deletetquiz/${id2}`,
